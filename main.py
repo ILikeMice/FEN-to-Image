@@ -34,11 +34,11 @@ boardimg = Image.open("./images/board.png").copy()
 for i in range(8):
     for b in range(8):
         if board[i][b] and board[i][b].islower():
-            piece = Image.open(f"./images/w{board[i][b]}.png")
+            piece = Image.open(f"./images/b{board[i][b]}.png")
             piece.resize((515//8, 515//8))
             boardimg.paste(piece, (((515//8)*b), (515//8)*i), piece)
         elif board[i][b] and board[i][b].isupper():
-            piece = Image.open(f"./images/b{board[i][b].lower()}.png")
+            piece = Image.open(f"./images/w{board[i][b].lower()}.png")
             piece.resize((515//8, 515//8))
             boardimg.paste(piece, (((515//8)*b), (515//8)*i), piece)
 
