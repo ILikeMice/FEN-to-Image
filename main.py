@@ -28,8 +28,6 @@ for i in usrinput:
     if i == " ":
         break
 
-print(board)
-
 boardimg = Image.open("./images/board.png").copy()
 
 
